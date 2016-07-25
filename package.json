@@ -1,0 +1,22 @@
+{
+  "name": "cxs-primitives",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/components.js",
+  "scripts": {
+    "babel": "babel ./src --out-dir ./lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1"
+  },
+  "dependencies": {
+    "cxs": "^1.0.0-beta.11"
+  }
+}
