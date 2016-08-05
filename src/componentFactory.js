@@ -1,12 +1,12 @@
 import React from 'react'
 import cxs from 'cxs'
 
-export default function componentFactory(displayName, parentStyleProps, defaultComponent) {
+export default function componentFactory(displayName, defaultStyleProps, defaultComponent) {
   const compy = ({children, component, props, ...styleProps}) => {
     const Component = component || defaultComponent || 'div'
     let className
-    if (parentStyleProps || styleProps) {
-      className = cxs({...parentStyleProps, ...styleProps})
+    if (defaultStyleProps || styleProps) {
+      className = cxs({...defaultStyleProps, ...styleProps})
     }
     return <Component {...props} className={className}>{children}</Component>
   }
@@ -19,7 +19,7 @@ export default function componentFactory(displayName, parentStyleProps, defaultC
       React.PropTypes.string,
       React.PropTypes.func,
       React.PropTypes.object,
-    ]).isRequired,
+    ]),
     props: React.PropTypes.object,
   }
 
